@@ -15,10 +15,10 @@ public static void main(String[] args) {
 	WebDriver driver=new ChromeDriver();
 	driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 	driver.manage().window().maximize();
-	driver.get("file:///C:/Users/admin/Desktop/actionclasshtml/alertpopup.html123");
+	driver.get("file:///C:/Users/admin/Desktop/actionclasshtml/alertpopup.html");
 	WebElement button= driver.findElement(By.xpath("//button[text()='Try it']"));
 	button.click();
-	Alert alert = driver.get().alert();
+	Alert alert = driver.switchTo().alert();
 	String msg = alert.getText();
 	System.out.println(msg);
 	//alert.accept();
